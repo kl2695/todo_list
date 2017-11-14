@@ -3,12 +3,12 @@ import rootReducer from '../reducers/root_reducer';
 import logger from 'redux-logger';
 
 
-export const store = (state = {}) => {
-  createStore(
+
+export const configureStore = (state = {}) => createStore(
     rootReducer,
     state,
     applyMiddleware(logger)
   );
-};
 
-export default store;
+
+export default configureStore;
